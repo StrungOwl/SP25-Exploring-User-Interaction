@@ -1,0 +1,78 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  color: white;
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.frame {
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  cursor: pointer;
+}
+
+.info-text {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #764ba2;
+  color: #764ba2;
+  font-size: 0.9em;
+  line-height: 1.6;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .frame {
+    padding: 20px;
+  }
+}
