@@ -53,6 +53,7 @@ body {
         radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
     min-height: 100vh;
     padding: 20px;
+    padding-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -42,17 +42,20 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Georgia', serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +75,7 @@ html, body {
 .frame {
   width: 100%;
   background: white;
-  padding: 30px;
+  padding: 15px;
   border-radius: 20px;
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.3),

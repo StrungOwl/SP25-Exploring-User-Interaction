@@ -20,13 +20,14 @@ function preload() {
 }
 
 function setup() {
-    // Calculate canvas size to fit within container, accounting for nav bar
-    let canvasSize = min(450, windowWidth * 0.8, windowHeight - 200);
+    // Calculate canvas size to fit within container, accounting for nav bar (60px) and padding
+    let availableHeight = windowHeight - 180;
+    let canvasSize = min(550, windowWidth * 0.85, availableHeight);
     let canvas = createCanvas(canvasSize, canvasSize); // Create square canvas
     canvas.parent('canvas-container'); // Attach to container
     imageMode(CENTER); // Set image mode to center
 
-    imgS = height * 0.6; // Set image size
+    imgS = height * 0.8; // Set image size
     imgX = width / 2; // Set image X position
     imgY = height / 2; // Set image Y position
 
@@ -71,11 +72,12 @@ function mousePressed() {
 }
 
 function windowResized() {
-    // Recalculate canvas size on resize
-    let canvasSize = min(450, windowWidth * 0.8, windowHeight - 200);
+    // Recalculate canvas size on resize, accounting for nav bar (60px) and padding
+    let availableHeight = windowHeight - 180;
+    let canvasSize = min(550, windowWidth * 0.85, availableHeight);
     resizeCanvas(canvasSize, canvasSize);
 
-    imgS = height * 0.6; // Update image size
+    imgS = height * 0.8; // Update image size
     imgX = width / 2; // Update image X position
     imgY = height / 2; // Update image Y position
 
