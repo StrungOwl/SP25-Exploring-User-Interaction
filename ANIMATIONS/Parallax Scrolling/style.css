@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+    height: 500vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 500vh;
+}
+
+.parallax-layer {
+    position: fixed;
+    width: 100%;
+    will-change: transform;
+}
+
+.parallax-layer.hero,
+.parallax-layer.content {
+    position: fixed;
+}
+
+/* Background layers (colored rectangles) - furthest to closest */
+.bg-layer-1 {
+    top: -80%;
+    right: 8%;
+    width: 700px;
+    height: 800px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.bg-layer-2 {
+    top: -60%;
+    left: 50%;
+    width: 650px;
+    height: 750px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.bg-layer-3 {
+    top: -40%;
+    right: 25%;
+    width: 600px;
+    height: 700px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    opacity: 0.35;
+    z-index: 3;
+}
+
+.bg-layer-4 {
+    top: -20%;
+    left: 60%;
+    width: 650px;
+    height: 750px;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    opacity: 0.4;
+    z-index: 4;
+}
+
+.bg-layer-5 {
+    top: 5%;
+    right: 35%;
+    width: 700px;
+    height: 800px;
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    opacity: 0.5;
+    z-index: 5;
+}
+
+.bg-layer-6 {
+    top: 25%;
+    left: 45%;
+    width: 750px;
+    height: 850px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    opacity: 0.6;
+    z-index: 6;
+}
+
+.bg-layer-7 {
+    top: 50%;
+    right: 40%;
+    width: 680px;
+    height: 780px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    opacity: 0.65;
+    z-index: 7;
+}
+
+.bg-layer-8 {
+    top: 75%;
+    left: 55%;
+    width: 720px;
+    height: 820px;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    opacity: 0.7;
+    z-index: 8;
+}
+
+.bg-layer-9 {
+    top: 100%;
+    right: 30%;
+    width: 760px;
+    height: 860px;
+    background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
+    opacity: 0.75;
+    z-index: 9;
+}
+
+/* Text layers */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(60px, 12vw, 150px);
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: -2px;
+    background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8));
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20%;
+    height: 100vh;
+    z-index: 11;
+}
+
+.content p {
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: center;
+    color: #e0e0e0;
+    max-width: 700px;
+}
+
+/* Left side rectangles (slower = darker/larger, faster = lighter/smaller) */
+.left-rect-1 {
+    top: -40%;
+    left: 10%;
+    width: 120px;
+    height: 950px;
+    background: #1a1a1a;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.left-rect-2 {
+    top: -20%;
+    left: 15%;
+    width: 100px;
+    height: 850px;
+    background: #2a2a2a;
+    opacity: 0.85;
+    z-index: 3;
+}
+
+.left-rect-3 {
+    top: 0%;
+    left: 12%;
+    width: 90px;
+    height: 750px;
+    background: #3a3a3a;
+    opacity: 0.8;
+    z-index: 4;
+}
+
+.left-rect-4 {
+    top: 20%;
+    left: 18%;
+    width: 80px;
+    height: 650px;
+    background: #4a4a4a;
+    opacity: 0.75;
+    z-index: 5;
+}
+
+.left-rect-5 {
+    top: 40%;
+    left: 14%;
+    width: 70px;
+    height: 550px;
+    background: #5a5a5a;
+    opacity: 0.7;
+    z-index: 6;
+}
+
+.left-rect-6 {
+    top: 60%;
+    left: 16%;
+    width: 60px;
+    height: 450px;
+    background: #6a6a6a;
+    opacity: 0.65;
+    z-index: 7;
+}
+
+/* Position each text layer at different vertical positions */
+.layer-text-1 {
+    top: 0;
+}
+
+.layer-text-2 {
+    top: 0;
+}
+
+.layer-text-3 {
+    top: 0;
+}
+
+.layer-text-4 {
+    top: 0;
+}
+
+/* Walls (static foreground rectangles) */
+.wall {
+    position: fixed;
+    background-color: #1a1a1a;
+    z-index: 100;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.wall-left {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+}
+
+.wall-right {
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100vh;
+}
+
+.wall-top {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+}
+
+.wall-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+}

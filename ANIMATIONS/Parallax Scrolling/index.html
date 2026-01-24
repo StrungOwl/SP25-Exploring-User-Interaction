@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parallax-container">
+        <!-- Background layers (furthest to closest) -->
+        <div class="parallax-layer bg-layer-1"></div>
+        <div class="parallax-layer bg-layer-2"></div>
+        <div class="parallax-layer bg-layer-3"></div>
+        <div class="parallax-layer bg-layer-4"></div>
+        <div class="parallax-layer bg-layer-5"></div>
+        <div class="parallax-layer bg-layer-6"></div>
+        <div class="parallax-layer bg-layer-7"></div>
+        <div class="parallax-layer bg-layer-8"></div>
+        <div class="parallax-layer bg-layer-9"></div>
+
+        <!-- Left side rectangles (slowest to fastest) -->
+        <div class="parallax-layer left-rect-1"></div>
+        <div class="parallax-layer left-rect-2"></div>
+        <div class="parallax-layer left-rect-3"></div>
+        <div class="parallax-layer left-rect-4"></div>
+        <div class="parallax-layer left-rect-5"></div>
+        <div class="parallax-layer left-rect-6"></div>
+
+        <!-- Content sections -->
+        <section class="hero parallax-layer layer-text-1">
+            <h1>THE PARALLAX<br>EXPERIENCE</h1>
+        </section>
+
+        <section class="content parallax-layer layer-text-2">
+            <p>Scroll down to explore the depth of layers moving at different speeds, creating an immersive visual journey through space and typography.</p>
+        </section>
+
+        <section class="hero parallax-layer layer-text-3">
+            <h1>THE<br>END</h1>
+        </section>
+
+        <section class="content parallax-layer layer-text-4">
+            <p>Each element exists on its own plane, sliding past one another as you navigate, revealing the architecture of digital space.</p>
+        </section>
+
+        <!-- Foreground walls (static rectangles) -->
+        <div class="wall wall-left"></div>
+        <div class="wall wall-right"></div>
+        <div class="wall wall-top"></div>
+        <div class="wall wall-bottom"></div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
